@@ -8,7 +8,7 @@ import SdlGamepadKeyNavigation 1.0
 
 CenteredGridView {
     property int computerIndex
-    property AppModel appModel : createModel()
+    property AppModel appModel
     property bool activated
     property bool showHiddenGames
     property bool showGames
@@ -27,6 +27,7 @@ CenteredGridView {
     }
 
     Component.onCompleted: {
+        appModel = createModel()
         // Don't show any highlighted item until interacting with them.
         // We do this here instead of onActivated to avoid losing the user's
         // selection when backing out of a different page of the app.

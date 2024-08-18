@@ -238,7 +238,10 @@ CenteredGridView {
                 }
                 else if (model.paired) {
                     // go to game view
-                    stackView.push(Qt.resolvedUrl("AppView.qml"), {"computerIndex": index, "objectName": model.name})
+                    stackView.push(Qt.resolvedUrl("AppView.qml"), {
+                        "computerIndex": index,
+                        "objectName": model.name
+                    })
                 }
                 else {
                     var pin = computerModel.generatePinString()
