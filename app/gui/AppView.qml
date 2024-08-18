@@ -348,7 +348,10 @@ CenteredGridView {
         standardButtons: Dialog.Yes | Dialog.No
 
         function quitApp() {
-            var params = {"appName": appName, "quitRunningAppFn": function() { appModel.quitRunningApp() } }
+            var params = {
+                "appName": appName,
+                "quitRunningAppFn": function() { appModel.quitRunningApp() }
+            }
 
             if (segueToStream) {
                 // Store the session and app name if we're going to stream after
